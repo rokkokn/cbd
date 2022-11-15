@@ -717,6 +717,7 @@ details[open] .faqList__summary::after {
   align-items: center;
 }
 
+
 .hl3--form {
   font-family: var(--font_min);
   font-size: 3.2rem;
@@ -728,6 +729,9 @@ details[open] .faqList__summary::after {
 }
 .hl4--form {
   display: inline-block;
+}
+.login_message_box_sp_ec{
+  margin-bottom: 8rem;
 }
 .form_box_label_sp_ec {
   margin-bottom: 2rem;
