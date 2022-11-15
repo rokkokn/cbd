@@ -724,6 +724,7 @@ details[open] .faqList__summary::after {
   border-left: 0.4rem solid var(--color_accent);
   margin-bottom: 4rem;
   font-weight: bold;
+  text-align: left;
 }
 .hl4--form {
   display: inline-block;
