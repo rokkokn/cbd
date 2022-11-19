@@ -1,29 +1,21 @@
-jQuery(function() {
+$(window).on('load',function(){$(function($) {
 /*
  * 固定ボタンの表示非表示切替
  */
-  var form = $('.js-formArea').innerHeight(); // formの高さを取得
-  
-  window.onscroll = function () {
-    var point = window.pageYOffset; // 現在のスクロール地点 
-    var docHeight = $(document).height(); // ドキュメントの高さ
-    var dispHeight = $(window).height(); // 表示領域の高さ
-  
-    if(point > docHeight-dispHeight/1.5-form){ // スクロール地点>ドキュメントの高さ-表示領域-formの高さ
-      $('.js-floatingNav').addClass('is-hidden'); //formより下にスクロールしたらis-hiddenを追加
-      // $('.js-required_field_exists').addClass('is-show');
-    }else{
-      $('.js-floatingNav').removeClass('is-hidden'); //formより上にスクロールしたらis-hiddenを削除
-      // $('.js-required_field_exists').removeClass('is-show');
-
-    }
-  };
-
-
-
-
-
+    var form = $('.js-formArea').offset().top; // formの高さを取得
+    
+    window.onscroll = function () {
+      var point = $(window).scrollTop(); // 現在のスクロール地点 
+    
+      console.log("point",point,"form.top",form)
+      if(point > form){ 
+        $('.js-floatingNav').addClass('is-hidden'); //formより下にスクロールしたらis-hiddenを追加
+      }else{
+        $('.js-floatingNav').removeClass('is-hidden'); //formより上にスクロールしたらis-hiddenを削除
+      }
+    };
   });
+});
 
 
 
