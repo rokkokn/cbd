@@ -698,12 +698,9 @@ details[open] .faqList__summary::after {
  =================================*/
 .formArea{
   text-align: center;
+  margin-top: 16rem;
+  padding-top: 16rem;
 }
-.hl2--formArea{
-  margin-top: var(--gutter_section);
-  text-align: center;
-}
-
 /* フッター
  =================================*/
 .footer {

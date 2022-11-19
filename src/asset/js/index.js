@@ -2,7 +2,7 @@ $(window).on('load',function(){$(function($) {
 /*
  * 固定ボタンの表示非表示切替
  */
-    var form = $('.js-formArea').offset().top; // formの高さを取得
+    var form = $('.js-formArea').offset().top-80; // formの高さを取得
     
     window.onscroll = function () {
       var point = $(window).scrollTop(); // 現在のスクロール地点 
