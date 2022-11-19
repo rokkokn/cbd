@@ -27,7 +27,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: var(--color_accent);
+  background: #fff;
   margin: 0;
   height: 100%;
   font-size: var(--fontSize_default);
@@ -66,9 +66,7 @@ ul {
 ul {
   list-style: none;
 }
-input {
-  border: none;
-}
+
 summary::-webkit-details-marker {
   /* Safariで表示されるデフォルトの三角形アイコンを消します */
   display: none;
@@ -217,16 +215,16 @@ Button:link {
   background-size: contain;
 }
 .gallery--document::after {
-    content: "";
-    display: block;
-    width: 64rem;
-    height: 60rem;
-    background-color: var(--color_backgroundAccent);
-    position: absolute;
-    top: -4rem;
-    left: 50%;
-    border-radius: 2rem;
-    transform: translateX(-50%);
+  content: "";
+  display: block;
+  width: 64rem;
+  height: 60rem;
+  background-color: var(--color_backgroundAccent);
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translateX(-50%);
 }
 .flickity-slider {
   z-index: 10;
@@ -238,7 +236,7 @@ Button:link {
   bottom: -9rem !important;
 }
 .gallery--conversion .flickity-page-dots {
-    bottom: -6rem !important;
+  bottom: -6rem !important;
 }
 .flickity-page-dots .dot {
   background: var(--color_accent2) !important;
@@ -262,7 +260,7 @@ Button:link {
 .flickity-button:hover {
   background: transparent;
   outline: none;
-  box-shadow:none;
+  box-shadow: none;
 }
 .flickity-prev-next-button.previous {
   left: -6rem;
@@ -416,9 +414,6 @@ Button:link {
   margin: 0 var(--gutter_container);
   border-radius: var(--border_radius_container);
 }
-.section--conversion2 {
-  margin-bottom: -10rem;
-}
 .productTitle {
   font-size: 3.6rem;
   margin-bottom: 3rem;
@@ -461,7 +456,7 @@ Button:link {
 }
 .productPrice {
   font-weight: bold;
-  font-size: 4.4rem;
+  font-size: 3.8rem;
   font-family: var(--font_min);
 }
 .productPrice__en {
@@ -662,6 +657,7 @@ Button:link {
 }
 .faqList__item {
   text-align: left;
+  cursor: pointer;
 }
 .faqList__summary {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -700,263 +696,12 @@ details[open] .faqList__summary::after {
 
 /* ご購入フォーム
  =================================*/
-.section--form {
-  padding: 10rem var(--gutter_container) 0;
-  margin-bottom: var(--gutter_section);
-  margin-top: -10rem;
-}
-.section__in--form {
-  text-align: left;
-}
-.formItemContainer {
-  margin-bottom: 6rem;
-}
-.formItemBox {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.hl3--form {
-  font-family: var(--font_min);
-  font-size: 3.2rem;
-  padding-left: 4rem;
-  border-left: 0.4rem solid var(--color_accent);
-  margin-bottom: 4rem;
-  font-weight: bold;
-  text-align: left;
-}
-.hl4--form {
-  display: inline-block;
-}
-.login_message_box_sp_ec{
-  margin-bottom: 8rem;
-}
-.form_box_label_sp_ec {
-  margin-bottom: 2rem;
-}
-.form_required {
-  color: #fff;
-  background: var(--color_accent);
-  line-height: 3.6rem;
-  padding: 0 1.6rem;
-  border-radius: 0.4rem;
-  display: inline-block;
-  align-items: center;
-  font-size: 2rem;
-}
-
-.selectContainer {
-  position: relative;
-}
-.selectContainer::before {
-  content: "";
-  display: inline-block;
-  width: 1.6rem;
-  height: 1.6rem;
-  border: 1px solid;
-  border-color: transparent var(--color_black) var(--color_black) transparent;
-  transform: translateY(-73%) rotate(45deg);
-  position: absolute;
-  right: 4rem;
-  top: 50%;
-  transition: transform 0.4s;
-}
-.selectContainer--cardlimit {
-  width: calc(50% - 5.2rem);
-}
-.select {
-  width: 100%;
-  cursor: pointer;
-  text-indent: 0.01px;
-  text-overflow: ellipsis;
-  border: 1px solid var(--color_black40);
-  border-radius: 0.8rem;
-  outline: none;
-  background: transparent;
-  background-image: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 9.6rem;
-  padding: 0 1.6rem;
-  color: var(--color_black);
-}
-.select::-ms-expand {
-  display: none;
-}
-.textBox {
-  border: 1px solid var(--color_black40);
-  border-radius: 0.8rem;
-  width: 100%;
-  height: 9.6rem;
-  padding: 0 1.6rem;
-}
-.textBox--postNum {
-  width: calc(100% - 5.2rem);
-}
-.postNumContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* チェックボックス、ラジオボタン */
-
-label {
-  display: inline-block;
-  margin-right: 1em;
-  margin-bottom: 0.4em;
-  cursor: pointer;
-  text-indent: -4.5rem;
-  padding-left: 4.5rem;
-  text-align: left;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  -moz-opacity: 0;
-  opacity: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  position: absolute;
-}
-
-input[type="radio"] + .radio-icon {
-  position: relative;
-  vertical-align: middle;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-top: -0.2em;
-  margin-right: 0.5em;
-  border-radius: 50%;
-  border: 1px solid var(--color_black40);
-  background: #fff;
-  box-shadow: none;
-  transition: all 0.2s ease-out;
-}
-
-input[type="radio"]:hover + .radio-icon {
-  background: #fff;
-  border: 1px solid var(--color_accent2);
-}
-input[type="radio"]:focus + .radio-icon {
-  border: 1px solid var(--color_accent2);
-  background: #fff;
-  box-shadow: 0 0 0 0.6rem #e1e8e3;
-}
-input[type="radio"]:checked + .radio-icon {
-  background: #fff;
-  border: 0.4rem solid var(--color_accent);
-}
-input[type="radio"]:checked + .radio-icon::after {
-  content: "";
-  width: 1.6rem;
-  height: 1.6rem;
-  display: block;
-  background: var(--color_accent);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-label:hover .radio-icon {
-  border: 1px solid var(--color_accent2);
-  background: var(--color_accent2);
-}
-
-input[type="checkbox"] + .check-icon {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  box-sizing: border-box;
-  width: 3.2rem;
-  height: 3.2rem;
-  margin-right: 0.5em;
-  transition: all 0.2s ease-out;
-  background: var(--color_accent);
-  border-radius: 0.4rem;
-}
-input[type="checkbox"] + .check-icon:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: inline-block;
-  box-sizing: border-box;
-  width: 3.2rem;
-  height: 3.2rem;
-  border: 1px solid var(--color_black40);
-  background: #fff;
-  box-shadow: none;
-  transition: all 0.1s ease-out;
-  border-radius: 0.4rem;
-}
-input[type="checkbox"]:checked + .check-icon:after {
-  position: absolute;
-  content: "";
-  top: 0.1em;
-  left: 0.4em;
-  width: 40%;
-  height: 60%;
-  transform: rotate(45deg);
-  border: solid 2px transparent;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
-}
-input[type="checkbox"]:focus + .check-icon {
-  border-radius: 0.4rem;
-  box-shadow: 0 0 0 0.6rem #e1e8e3;
-}
-input[type="checkbox"]:focus + .check-icon:after {
-  border-radius: 0.4rem;
-  box-shadow: none;
-}
-input[type="checkbox"]:focus:not(:cheked) + .check-icon:after {
-  border-color: var(--color_accent2);
-}
-
-label:hover
-  input[type="checkbox"]:not(:checked):not(:disabled)
-  + .check-icon:after {
-  border-color: var(--color_accent2);
-  border-radius: 0.4rem;
-}
-
-input[type="radio"]:disabled,
-input[type="radio"]:disabled + .radio-icon,
-input[type="checkbox"]:disabled,
-input[type="checkbox"]:disabled + .check-icon,
-input[type="checkbox"]:disabled + .check-icon:after {
-  background: #ccc;
-  border: none;
-  cursor: auto;
-}
-
-/* 残り項目 */
-.required_field_exists {
-  z-index: 99999;
-  width: 100%;
-  padding: 2rem 0;
-  font-size: 3.6rem;
-  font-weight: bold;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
+.formArea{
   text-align: center;
 }
-#popup_required_field_check.required_field_exists {
-  background-color: var(--color_black40);
+.hl2--formArea{
+  margin-top: var(--gutter_section);
+  text-align: center;
 }
 
 /* フッター
